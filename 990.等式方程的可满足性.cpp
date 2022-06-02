@@ -23,7 +23,7 @@ public:
     int father[27];
 
     int get(int x) {
-        if (x != father[x]) father[x] = get(father[x])
+        if (x != father[x]) father[x] = get(father[x]);
         return father[x];
     }
 
@@ -31,7 +31,33 @@ public:
         for (int i=0; i<26; i++) {
             father[i] = i;
         }
+        int n = equations.size();
+        for (int i=0; i<n; i++) {
+            string s = equations[i];
+            char a = s[0];
+            char b = s[s.length()-1];
+            char eq = s[1];
+            if (eq == '=') {
+                int fa = get(a - 'a');
+                int fb = get(b - 'a');
+                if (fa != fb) father[fa] = fb;
+            }
+        }
+        for (int i=0; i<n; i++) {
+            string s = equations[i];
+            char a = s[0];
+            char b = s[s.length()-1];
+            char eq = s[1];
+            if (eq == '!') {
+                int fa = get(a - 'a');
+                int fb = get(b - 'a');
+                if (fa == fb) return false;
+            }
+        }
+        return true;
     }
+    
+
 };
 // @lc code=end
 

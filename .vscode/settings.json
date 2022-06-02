@@ -1,6 +1,22 @@
 {
     "files.associations": {
         "*.cpp": "cpp",
-        "vector": "cpp"
+        "vector": "cpp",
+        "ios": "cpp",
+        "xiosbase": "cpp",
+        "xstring": "cpp",
+        "algorithm": "cpp",
+        "cmath": "cpp",
+        "queue": "cpp",
+        "iostream": "cpp",
+        "xtree": "cpp",
+        "map": "cpp",
+        "ostream": "cpp",
+        "stack": "cpp",
+        "istream": "cpp",
+        "xutility": "cpp",
+        "string": "cpp",
+        "utility": "cpp",
+        "xstddef": "cpp"
     }
 }
